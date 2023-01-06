@@ -22,11 +22,9 @@ If the DNS server returns a CNAME record, the browser sends a new request to the
 The DNS server responds with the IP address for the second domain, and the browser connects to the server at that IP address.
                                                                                                                                                           
   ## step 1
-  ## Subfinder for finding subdomain
+     ## Subfinder for finding subdomain
   
 $ subfinder -d Takeway.com > subdomain.txt
-```
-
 ## Step 2
 ## MassDns to find Subdomain Cname
 
