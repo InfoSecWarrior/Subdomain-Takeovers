@@ -15,14 +15,15 @@ CNAME (Canonical Name) is a type of DNS record that is used to alias one domain 
 
 ## Here's how CNAME works:
 
-    A user enters a domain name into their web browser (e.g., "www.example.com").
-    The browser sends a request to the DNS server to look up the IP address for the domain.
-    The DNS server responds with the IP address for the domain, or with a CNAME record that points to another domain.
-    If the DNS server returns a CNAME record, the browser sends a new request to the DNS server to look up the IP address for the domain specified in the CNAME record.
-    The DNS server responds with the IP address for the second domain, and the browser connects to the server at that IP address.
-  ```                                                                                                                                                        
+A user enters a domain name into their web browser (e.g., "www.example.com").
+The browser sends a request to the DNS server to look up the IP address for the domain.
+The DNS server responds with the IP address for the domain, or with a CNAME record that points to another domain.
+If the DNS server returns a CNAME record, the browser sends a new request to the DNS server to look up the IP address for the domain specified in the CNAME record.
+The DNS server responds with the IP address for the second domain, and the browser connects to the server at that IP address.
+                                                                                                                                                          
   ## step 1
   ## Subfinder for finding subdomain
+  
 $ subfinder -d Takeway.com > subdomain.txt
 ```
 
