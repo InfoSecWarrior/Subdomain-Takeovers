@@ -1,16 +1,32 @@
-## Subdomain-takeovers
+## Subdomain Takeover
 
-Subdomain takeover is a high-security vulnerability via which an attacker can control an expired management service from where the subdomain of the site was pointing
+Subdomain takeover is a type of attack that allows an attacker to control a subdomain that is not properly configured. This can happen if a subdomain is pointed to a service (e.g., GitHub pages, Heroku, etc.) that has been deleted or no longer belongs to the organization.
 
-## What is that service?
-It can be anything some of the vendors uses services like Shopify to build their shopping platform without changing their official subdomain you may have seen while shopping into some of the site something like powered by Shopify or something else this whole process of connecting one service to another is done by Cname.
+An attacker can then set up a page on the service that was previously being used by the subdomain, and use it to serve malicious content or conduct phishing attacks. Subdomain takeover can be difficult to detect and can have serious security implications for an organization. It is important to regularly check for and properly configure subdomains to prevent this type of attack.
 
-## What is Cname and How it works -
-Cname stands for the canonical name it is something that is related to hosting and domain connecting system so suppose you buy one domain from godaddy.com and hosting from hostinger.com for connecting this space we have things like nameserver did setup with nameserver and web services to get started this is the whole process apply on the name as well it is used to pointing one domain to another domain without getting the change with an actual subdomain.And if the name record expired then any malicious actor can perform a takeover
-  ```                                                                                                                                                                                                                                           
+## Why subdomain Takeover occurs
+
+A subdomain takeover vulnerability occurs when a subdomain (e.g., "test.example.com") is pointed to a service (e.g., GitHub pages, Heroku, etc.) that has been deleted or is no longer associated with the organization. This can happen if the organization was previously using a third-party service to host content for the subdomain, but the service was later decommissioned or the account was deleted. If the DNS record for the subdomain is not properly updated to point to a new location, an attacker may be able to register an account with the same name on the service and set up a page that is served from the subdomain.
+To prevent subdomain takeover vulnerabilities, it is important to regularly check for and properly configure subdomains, and to ensure that DNS records are updated when a service is no longer in use. It is also a good idea to monitor for any unexpected changes to subdomains, as this may be a sign of an attempted takeover.
+
+## What is Cname 
+
+CNAME (Canonical Name) is a type of DNS record that is used to alias one domain name to another. It is often used to redirect traffic from one subdomain (e.g., "www.example.com") to another subdomain (e.g., "app.example.com"), or to point a subdomain to a third-party service (e.g., GitHub pages).
+
+## Here's how CNAME works:
+
+A user enters a domain name into their web browser (e.g., "www.example.com").
+The browser sends a request to the DNS server to look up the IP address for the domain.
+The DNS server responds with the IP address for the domain, or with a CNAME record that points to another domain.
+If the DNS server returns a CNAME record, the browser sends a new request to the DNS server to look up the IP address for the domain specified in the CNAME record.
+The DNS server responds with the IP address for the second domain, and the browser connects to the server at that IP address.
+
+## How to check for Subdomain Takeover
+
+## step 1
+     ## Subfinder for finding subdomain
+  
 $ subfinder -d Takeway.com > subdomain.txt
-```
-
 ## Step 2
 ## MassDns to find Subdomain Cname
 
