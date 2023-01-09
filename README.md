@@ -4,7 +4,7 @@ Subdomain takeover is a type of attack that allows an attacker to control a subd
 
 An attacker can then set up a page on the service that was previously being used by the subdomain, and use it to serve malicious content or conduct phishing attacks. Subdomain takeover can be difficult to detect and can have serious security implications for an organization. It is important to regularly check for and properly configure subdomains to prevent this type of attack.
 
-## What is vulnerbility due to which subdomain takeover occurs
+## Why subdomain Takeover occurs
 
 A subdomain takeover vulnerability occurs when a subdomain (e.g., "test.example.com") is pointed to a service (e.g., GitHub pages, Heroku, etc.) that has been deleted or is no longer associated with the organization. This can happen if the organization was previously using a third-party service to host content for the subdomain, but the service was later decommissioned or the account was deleted. If the DNS record for the subdomain is not properly updated to point to a new location, an attacker may be able to register an account with the same name on the service and set up a page that is served from the subdomain.
 To prevent subdomain takeover vulnerabilities, it is important to regularly check for and properly configure subdomains, and to ensure that DNS records are updated when a service is no longer in use. It is also a good idea to monitor for any unexpected changes to subdomains, as this may be a sign of an attempted takeover.
